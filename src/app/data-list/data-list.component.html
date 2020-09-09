@@ -1,4 +1,9 @@
-<p>Data list works</p>
-<div *ngFor = "let a of albumList">
-  {{a.title}}
-</div>
+
+<div style="margin:auto; width:50%; border:5px solid; border-color:green; padding:10px">
+  <select [(ngModel)]="albumSelected">
+    <option *ngFor = "let a of albumList" [value]="a.id">
+      {{a.title}}
+    </option>
+  </select>
+</div>  
+{{albumSelected}}
