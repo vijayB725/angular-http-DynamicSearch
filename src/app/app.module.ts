@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { DataListComponent } from './data-list/data-list.component';
+import {TableModule} from 'primeng/table';
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, TableModule ],
   declarations: [ AppComponent, HelloComponent, DataListComponent ],
   bootstrap:    [ AppComponent ]
 })

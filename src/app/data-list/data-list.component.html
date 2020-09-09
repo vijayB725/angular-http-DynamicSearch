@@ -28,4 +28,24 @@
   </tbody>
 </table>
 
+<p-table [value]="pictureList" [paginator]="true" [rows]="10">
+  <ng-template pTemplate="header" >
+        <tr>
+            <th>Id</th>
+            <th>Album Id</th>
+            <th>Title</th>
+            <th>URL</th>
+            <th>Thumbnail URL</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-al>
+        <tr>
+      <td>{{al.id}}</td>
+      <td>{{al.albumId}}</td>
+      <td>{{al.title}}</td>
+      <td>{{al.url}}</td>
+      <td>{{al.thumbnailUrl}}</td>
+        </tr>
+    </ng-template>
+</p-table>
 
