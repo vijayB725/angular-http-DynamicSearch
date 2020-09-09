@@ -19,4 +19,11 @@ export class DataListComponent implements OnInit {
   ngOnInit() {
     this._dataService.getAlbums().subscribe(data => (this.albumList = data));
   }
+
+  onAlbumSelected(selectedA){
+    this._dataService.getPicturesByAlbumId(selectedA).subscribe(
+      data => this.pictureList = data
+    )
+  }
+
 }
