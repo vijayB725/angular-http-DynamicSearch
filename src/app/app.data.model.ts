@@ -1,0 +1,3 @@
+export class dataModel{
+  public 
+}

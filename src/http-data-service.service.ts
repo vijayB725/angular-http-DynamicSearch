@@ -7,12 +7,11 @@ import { HttpClient} from '@angular/common/http';
 
 export class HttpDataServiceService {
 
-  private apiUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo";
-
+  private albumUrl = "https://jsonplaceholder.typicode.com/albums";
   constructor(private _http: HttpClient) { }
 
   getData(){
-    return this._http.get(this.apiUrl);
+    return this._http.get(this.albumUrl);
   }
 
 }
